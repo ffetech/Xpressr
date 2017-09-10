@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D90535C7-C61F-4DB6-BBB0-9ADB28427128}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FFETech.Xpressr</RootNamespace>
+    <AssemblyName>FFETech.Xpressr</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FFETech.System, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\_References\FFETech.System.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Source\Expressions\Common\ExpressionReader\CsvExpressionReader.cs" />
+    <Compile Include="Source\Expressions\Common\ExpressionReader\EmbraceExpressionReader.cs" />
+    <Compile Include="Source\Expressions\Common\ExpressionReader\FunctionExpressionReader.cs" />
+    <Compile Include="Source\Expressions\Common\ExpressionReader\IExpressionReader.cs" />
+    <Compile Include="Source\Expressions\Common\ExpressionReader\OperandExpressionReader.cs" />
+    <Compile Include="Source\Expressions\Common\ExpressionReader\OperationExpressionReader.cs" />
+    <Compile Include="Source\Expressions\Common\ExpressionReader\OperatorExpressionReader.cs" />
+    <Compile Include="Source\Expressions\Common\ExpressionReader\ParamExpressionReader.cs" />
+    <Compile Include="Source\Expressions\Common\ExpressionReader\SpaceExpressionReader.cs" />
+    <Compile Include="Source\Expressions\Common\ExpressionReader\TokenExpressionReader.cs" />
+    <Compile Include="Source\Expressions\Common\ExpressionSource\IExpressionSource.cs" />
+    <Compile Include="Source\Expressions\Common\ExpressionSource\StreamExpressionSource.cs" />
+    <Compile Include="Source\Expressions\Common\ExpressionSource\StringExpressionSource.cs" />
+    <Compile Include="Source\Expressions\Common\ExpressionVisitor.cs" />
+    <Compile Include="Source\Expressions\Common\Expression\ExpressionDictionary.cs" />
+    <Compile Include="Source\Expressions\Common\Expression\ExpressionList.cs" />
+    <Compile Include="Source\Expressions\Common\Expression\IExpression.cs" />
+    <Compile Include="Source\Expressions\Common\Expression\IExpressionDictionary.cs" />
+    <Compile Include="Source\Expressions\Common\Expression\IExpressionList.cs" />
+    <Compile Include="Source\Expressions\Common\Expression\IOperationExpression.cs" />
+    <Compile Include="Source\Expressions\Common\Expression\IValueExpression.cs" />
+    <Compile Include="Source\Expressions\Common\Expression\OperationExpression.cs" />
+    <Compile Include="Source\Expressions\Common\Expression\ValueExpression.cs" />
+    <Compile Include="Source\Expressions\Common\InvalidExpressionException.cs" />
+    <Compile Include="Source\Expressions\Markup\IMarkupExpression.cs" />
+    <Compile Include="Source\Expressions\Markup\MarkupExpression.cs" />
+    <Compile Include="Source\Expressions\Markup\MarkupExpressionReader.cs" />
+    <Compile Include="Source\Expressions\Sql\ISqlSelectExpression.cs" />
+    <Compile Include="Source\Expressions\Sql\SqlOperationExpressionReader.cs" />
+    <Compile Include="Source\Expressions\Sql\SqlSelectExpression.cs" />
+    <Compile Include="Source\Expressions\Sql\SqlSelectExpressionReader.cs" />
+    <Compile Include="Source\Expressions\Sql\SqlTermExpressionReader.cs" />
+    <Compile Include="Source\Parsing\PrsContentElement.cs" />
+    <Compile Include="Source\Parsing\PrsElement.cs" />
+    <Compile Include="Source\Parsing\PrsExpression.cs" />
+    <Compile Include="Source\Parsing\PrsExpressionTarget.cs" />
+    <Compile Include="Source\Parsing\PrsFieldElement.cs" />
+    <Compile Include="Source\Parsing\PrsLoopRange.cs" />
+    <Compile Include="Source\Parsing\PrsRange.cs" />
+    <Compile Include="Source\Parsing\PrsRegexElement.cs" />
+    <Compile Include="Source\Parsing\PrsTemplate.cs" />
+    <Compile Include="Source\Parsing\PrsTemplateReader.cs" />
+    <Compile Include="Source\Parsing\IPrsExpressionTarget.cs" />
+    <Compile Include="Source\Parsing\IPrsOutput.cs" />
+    <Compile Include="Source\Reporting\RptColors.cs" />
+    <Compile Include="Source\Reporting\RptColorSequence.cs" />
+    <Compile Include="Source\Reporting\RptChartOrientation.cs" />
+    <Compile Include="Source\Reporting\IRptDataSet.cs" />
+    <Compile Include="Source\Reporting\IRptExpressionTarget.cs" />
+    <Compile Include="Source\Reporting\IRptRecord.cs" />
+    <Compile Include="Source\Reporting\RptAggregateElement.cs" />
+    <Compile Include="Source\Reporting\RptAverageAggregateElement.cs" />
+    <Compile Include="Source\Reporting\RptChartAxis.cs" />
+    <Compile Include="Source\Reporting\RptChartCategoryAxis.cs" />
+    <Compile Include="Source\Reporting\RptChartElement.cs" />
+    <Compile Include="Source\Reporting\RptChartLegend.cs" />
+    <Compile Include="Source\Reporting\RptChartMeasureAxis.cs" />
+    <Compile Include="Source\Reporting\RptChartSeriesDef.cs" />
+    <Compile Include="Source\Reporting\RptCollectionRange.cs" />
+    <Compile Include="Source\Reporting\RptConditionElseElement.cs" />
+    <Compile Include="Source\Reporting\RptConditionIfElement.cs" />
+    <Compile Include="Source\Reporting\RptConditionRange.cs" />
+    <Compile Include="Source\Reporting\RptContentElement.cs" />
+    <Compile Include="Source\Reporting\RptCountAggregateElement.cs" />
+    <Compile Include="Source\Reporting\RptDataException.cs" />
+    <Compile Include="Source\Reporting\RptDataSetRange.cs" />
+    <Compile Include="Source\Reporting\RptDocument.cs" />
+    <Compile Include="Source\Reporting\RptElement.cs" />
+    <Compile Include="Source\Reporting\RptExpression.cs" />
+    <Compile Include="Source\Reporting\RptExpressionElement.cs" />
+    <Compile Include="Source\Reporting\RptExpressionTarget.cs" />
+    <Compile Include="Source\Reporting\RptFieldElement.cs" />
+    <Compile Include="Source\Reporting\RptGroupRange.cs" />
+    <Compile Include="Source\Reporting\RptLookupElement.cs" />
+    <Compile Include="Source\Reporting\RptPrototypeRange.cs" />
+    <Compile Include="Source\Reporting\RptRange.cs" />
+    <Compile Include="Source\Reporting\RptRecordRange.cs" />
+    <Compile Include="Source\Reporting\RptScriptProvider.cs" />
+    <Compile Include="Source\Reporting\RptSumAggregateElement.cs" />
+    <Compile Include="Source\Reporting\RptTemplateException.cs" />
+    <Compile Include="Source\Reporting\RptTemplateReader.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\COPYING.LESSER.txt">
+      <Link>COPYING.LESSER.txt</Link>
+    </Content>
+    <Content Include="..\COPYING.txt">
+      <Link>COPYING.txt</Link>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
