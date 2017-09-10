@@ -1,0 +1,10 @@
+﻿*.chm
+*.chm
+*.suo
+*.userprefs
+*.user
+.vs
+Backup
+**/bin
+**/obj
+**/packages

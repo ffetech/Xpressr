@@ -59,18 +59,15 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="..\COPYING.LESSER.txt">
-      <Link>COPYING.LESSER.txt</Link>
-    </Content>
-    <Content Include="..\COPYING.txt">
-      <Link>COPYING.txt</Link>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\FFETech.Xpressr\FFETech.Xpressr.csproj">
       <Project>{d90535c7-c61f-4db6-bbb0-9adb28427128}</Project>
       <Name>FFETech.Xpressr</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\LICENSE.txt">
+      <Link>LICENSE.txt</Link>
+    </Content>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
